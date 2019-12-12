@@ -29,21 +29,15 @@ pipeline {
                 }
             }
         }
-		
-		stage('Clone repository') {
-        checkout scm
-    }
-
+	}
+}
+	node {
+    def app
+	
     stage('Build image') {
         app = docker.build("mkieliszek51/coursework_2")
     }
 
-    stage('Test image') {
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
 	stage('Push image') {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
@@ -51,5 +45,4 @@ pipeline {
         }
     }
 	
-    }
 }
