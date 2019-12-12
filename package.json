@@ -1,0 +1,21 @@
+{
+  "name": "coursework_2",
+  "version": "1.0.0",
+  "description": "pipeline",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MKieliszek51/coursework_2"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "dockerfile"
+  ],
+  "author": "Mateusz Kieliszek",
+  "license": "ISC"
+}
