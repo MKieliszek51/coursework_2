@@ -50,7 +50,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("coursework_2")
+        app = docker.build("mkieliszek51/coursework_2")
     }
 
     stage('Test image') {
